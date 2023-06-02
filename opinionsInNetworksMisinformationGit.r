@@ -7,7 +7,7 @@ library(infotheo)
 library(dplyr)
 library(ggplot2)
 
-setwd( "/Users/rgoldsto/word_proc_docs/socialCAS/opinionsInNetworks")
+setwd( "/Users/rgoldsto/word_proc_docs/socialCAS/opinionsInNetworks") # This line should be set to your own preferred working directory
 
 #Next steps:
 # Could make people more stubborn to change opinion if they have held an opinion for a long time - previous steps opinions influence "myself"
@@ -235,6 +235,8 @@ ggplot(Exp1,aes(x=probOut,y=assortativity,group=weightOut,color=weightOut)) + st
 #If don't connect to outgroup members, then weight you give to them doesn't matter.  If you are connected to many outgroup members but you don't weight them, then assortativity will be low- there'll be lots of times when you have opposite opinions of others
 #But if you're connected to a lot of outgroup members and you care what they think, then assortativity will be high - all of your neighbors will have your opinion
 
+Exp0<-parameterSweep("numR", c(5,10,20,40,80),"evidenceI",c(0,0.25,0.75,1),reps=50)
+plotResults(ExpTest)
 
 exp1<-parameterSweep("probO", c(0.002,0.004,.008,0.016),"weightO",c(0.1,0.3,0.5,0.7,0.9),reps=100)
 plotResults(exp1)

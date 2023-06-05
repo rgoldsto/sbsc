@@ -25,3 +25,35 @@ This creates and then plots a 5 X 4 set of simulations, each of which is the res
 "numR"=Number of Rounds
 
 See the above paper for more information on these parameters.
+
+The "Simulations" folder contains plots of 9 classes of simulations:
+
+  evidenceI X utilityD: a 4 (evidenceI = 0, 0.25, 0.75, 1) X 5 (utilityD = 0.02, 0.04, 0.1, 0.2, 0.4) parameter sweep
+
+  gamma X evidenceIntegration
+
+  numCommunities X numOpinions
+
+  numCommunities X evidenceIntegration
+
+  numOpinions X gamma
+
+  numRounds X evidenceI
+
+  probO X gamma
+
+  probOut X evidenceIntegration
+
+  weightO X evidenceI
+
+For each of these simulation classes, we calculate 5 measures for the networks:
+  Average Performance: The average quality of opinions of the agents in a population
+
+  Percentage Best: The percentage of agents who have the best (highest ranked) opinion
+
+  Entropy: The entropy of the opinions in the population.  As agents adopt a more diverse set of opinions (e.g. it becomes harder to predict what opinion any particular agent has based on the overall distribution of opinions in the population), entropy increases.
+
+  Mutual information: Measures the dependency between two categorical variables via I(X;Y) = H(Y)-H(Y|X) = H(X)-H(X|Y) = H(X,Y)-H(X|Y)-H(Y|X).  In the present case, the variables are the communities to which agents belong and the opinions possessed by agents.  Note that if all agents in a population have the same opinion, the entropy will low and the mutual information will also be low because knowing an agent's community doesn't provide any (additional) information in determining their opinion and vice versa.
+
+  Assortativity: the average probability of two network neighbors having the same opinion. Assortativity is not always the same as mutual information because if every agent in the population has the same opinion, assortativity is high, but mutual information is low.
+

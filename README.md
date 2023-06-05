@@ -38,15 +38,16 @@ The "Simulations" folder contains plots of 9 classes of simulations:
 
   numOpinions X gamma
 
-  numRounds X evidenceI
+  numRounds X evidenceIntegration
 
-  probO X gamma
+  probOut X gamma
 
   probOut X evidenceIntegration
 
-  weightO X evidenceI
+  weightO X evidenceIntegration
 
 For each of these simulation classes, we calculate 5 measures for the networks:
+
   Average Performance: The average quality of opinions of the agents in a population
 
   Percentage Best: The percentage of agents who have the best (highest ranked) opinion
